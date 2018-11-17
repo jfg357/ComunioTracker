@@ -3,7 +3,7 @@
 ![](https://cdn.dribbble.com/users/1122111/screenshots/4828191/comunio_rebrand_animation_v6.gif)  
 
 ## GUI Database Program
-The **content** and **functionality** of this program are up to you!
+The **content** and **functionality** of this program were up to us!
 
 ### Requirements:
   - Use *JavaFX*
@@ -12,7 +12,6 @@ The **content** and **functionality** of this program are up to you!
   - No CheckStyle errors
   - Extensive inline documentation 
   - A README explaining the project
-  - Submit a link to the project in GitHub. 
 
 ### Libraries
 
@@ -22,8 +21,10 @@ This project uses a number of libraries:
 * [CalendarFX](https://github.com/dlemmermann/CalendarFX) - sophisticated calendar views based on 
 JavaFX.
 
-## Rubric
 ![](https://thumbs.gfycat.com/BrilliantEllipticalBobolink-size_restricted.gif)
+
+## Rubric
+
 ****Database Related****|****Points Available****|****My Project****
 :-----:|:-----:|:-----:
 Create a record in a database|10| 
