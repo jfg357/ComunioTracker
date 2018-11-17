@@ -16,5 +16,7 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="fontawesomefx-9.1.2" level="project" />
+    <orderEntry type="library" name="CalendarFX-10.5.0" level="project" />
   </component>
 </module>
