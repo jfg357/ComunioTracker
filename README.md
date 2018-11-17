@@ -1,6 +1,8 @@
 # Comunio Tracker
 
 ![](https://cdn.dribbble.com/users/1122111/screenshots/4828191/comunio_rebrand_animation_v6.gif) 
+![](https://thumbs.gfycat.com/BrilliantEllipticalBobolink-size_restricted.gif) 
+ 
 
 This project is purely JavaFX - it gives you a basis of what to do regarding your projects, 
 **Note:** it is not a fully fledged system. Some of the things covered apart from UI design is
