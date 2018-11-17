@@ -20,7 +20,7 @@ This project uses a number of libraries:
 JavaFX.
 
 ## Rubric
-***Database Related***|**Points Available**|**My Project**
+****Database Related****|****Points Available****|****My Project****
 :-----:|:-----:|:-----:
 Create a record in a database|10| 
 Read from a database SELECT|10| 
@@ -32,7 +32,7 @@ SQL AND, OR or NOT|3|
 SQL Join|5| 
 SQL multiple Join|5| 
 Sub query|5| 
-Database Subtotal|64| 
+**Database Subtotal**|**64**| 
  | | 
 ****GUI Related - Controls****| | 
 Button|2| 
@@ -43,31 +43,30 @@ DatePicker|2|
 ImageView|2| 
 Label|2| 
 MediaView|2| 
- |2| 
 MenuBar|2| 
 MenuButton|2| 
 Slider|2| 
 TableView|2| 
 TextArea|2| 
 TextField|2| 
-Controls Subtotal|30| 
+**Controls Subtotal**|**30**| 
  | | 
-GUI Related - Other| | 
+****GUI Related - Other****| | 
 CSS|3| 
 CSS > 10 styles set |3| 
 Animation|3| 
 Chart|3| 
 Shape|3| 
 Visual Effect|3| 
-Other GUI Subtotal|18| 
+**Other GUI Subtotal**|**18**| 
  | | 
-Requirements| | 
+****Requirements****| | 
 Comment / paragraph explaining how you adhered to GUI Design Principles in code or README|10| 
 Google Style Guide CheckStyle|15| 
 SpotBugs finds no problems|15| 
 README|15| 
 Database Diagram|5| 
-Requirements Subtotal|60| 
+**Requirements Subtotal**|**60**| 
  | | 
-Other Options| | 
+****Other Option****s| | 
 Animated GIF in README|10| 
