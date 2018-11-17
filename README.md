@@ -20,7 +20,7 @@ This project uses a number of libraries:
 JavaFX.
 
 ## Rubric
-*Database Related*|*Points Available*|*My Project*
+***Database Related***|**Points Available**|**My Project**
 :-----:|:-----:|:-----:
 Create a record in a database|10| 
 Read from a database SELECT|10| 
@@ -34,7 +34,7 @@ SQL multiple Join|5|
 Sub query|5| 
 Database Subtotal|64| 
  | | 
-*GUI Related - Controls*| | 
+****GUI Related - Controls****| | 
 Button|2| 
 CheckBox|2| 
 ColorPicker|2| 
