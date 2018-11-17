@@ -19,7 +19,7 @@ This project uses a number of libraries:
 * [CalendarFX](https://github.com/dlemmermann/CalendarFX) - sophisticated calendar views based on 
 JavaFX.
 
-##Rubric
+## Rubric
 **Database Related**|**Points Available**|**My Project**
 :-----:|:-----:|:-----:
 Create a record in a database|10| 
