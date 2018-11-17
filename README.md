@@ -1,15 +1,18 @@
 # Comunio Tracker
 
-![](https://cdn.dribbble.com/users/1122111/screenshots/4828191/comunio_rebrand_animation_v6.gif) 
-![](https://thumbs.gfycat.com/BrilliantEllipticalBobolink-size_restricted.gif) 
- 
+![](https://cdn.dribbble.com/users/1122111/screenshots/4828191/comunio_rebrand_animation_v6.gif)  
 
-This project is purely JavaFX - it gives you a basis of what to do regarding your projects, 
-**Note:** it is not a fully fledged system. Some of the things covered apart from UI design is
+## GUI Database Program
+The **content** and **functionality** of this program are up to you!
 
-  - Adding data to tableview
-  - Setting Application Icon
-  - Showing FXML as modals
+### Requirements:
+  - Use *JavaFX*
+  - Use a **database**
+  - No ***SpotBugs*** errors
+  - No CheckStyle errors
+  - Extensive inline documentation 
+  - A README explaining the project
+  - Submit a link to the project in GitHub. 
 
 ### Libraries
 
@@ -20,6 +23,7 @@ This project uses a number of libraries:
 JavaFX.
 
 ## Rubric
+![](https://thumbs.gfycat.com/BrilliantEllipticalBobolink-size_restricted.gif)
 ****Database Related****|****Points Available****|****My Project****
 :-----:|:-----:|:-----:
 Create a record in a database|10| 
