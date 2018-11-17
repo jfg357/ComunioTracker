@@ -1,4 +1,4 @@
-package home.controllers;
+package app.controllers;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -37,11 +37,11 @@ public class Controller implements Initializable {
     @FXML
     private void handleButtonClicks(javafx.event.ActionEvent mouseEvent) {
         if (mouseEvent.getSource() == btnDashboard) {
-            loadStage("/home/fxml/Dashboard.fxml");
+            loadStage("/app/fxml/Dashboard.fxml");
         } else if (mouseEvent.getSource() == btnStudents) {
-            loadStage("/home/fxml/Students.fxml");
+            loadStage("/app/fxml/Students.fxml");
         } else if (mouseEvent.getSource() == btn_Timetable) {
-            loadStage("/home/fxml/Timetable.fxml");
+            loadStage("/app/fxml/Timetable.fxml");
         }
     }
 
@@ -55,7 +55,7 @@ public class Controller implements Initializable {
             Parent root = FXMLLoader.load(getClass().getResource(fxml));
             Stage stage = new Stage();
             stage.setScene(new Scene(root));
-            stage.getIcons().add(new Image("/home/icons/icon.png"));
+            stage.getIcons().add(new Image("/app/icons/icon.png"));
             stage.initModality(Modality.APPLICATION_MODAL);
             stage.show();
         } catch (IOException e) {

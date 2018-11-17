@@ -1,6 +1,6 @@
 # Comunio Tracker
 
-![](https://cdn.dribbble.com/users/1122111/screenshots/4828191/comunio_rebrand_animation_v6.gif)  
+![](Comunio.gif)  
 
 ## GUI Database Program
 The **content** and **functionality** of this program were up to us!
@@ -21,7 +21,7 @@ This project uses a number of libraries:
 * [CalendarFX](https://github.com/dlemmermann/CalendarFX) - sophisticated calendar views based on 
 JavaFX.
 
-![](https://thumbs.gfycat.com/BrilliantEllipticalBobolink-size_restricted.gif)
+![](James.gif)
 
 ## Rubric
 

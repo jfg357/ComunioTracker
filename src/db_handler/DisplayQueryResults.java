@@ -1,4 +1,4 @@
-// Fig. X: DisplayQueryResults.java
+package db_handler;// Fig. X: DisplayQueryResults.java
 // Main application class that loads and displays the GUI.
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -10,7 +10,7 @@ public class DisplayQueryResults extends Application {
    @Override
    public void start(Stage stage) throws Exception {
       Parent root = 
-         FXMLLoader.load(getClass().getResource("DisplayQueryResults.fxml"));
+         FXMLLoader.load(getClass().getResource("db_handler/DisplayQueryResults.fxml"));
       
       Scene scene = new Scene(root);
       stage.setTitle("Display Query Results");

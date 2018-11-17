@@ -1,4 +1,4 @@
-package home.model;
+package app.model;
 
 
 import javafx.beans.property.SimpleIntegerProperty;

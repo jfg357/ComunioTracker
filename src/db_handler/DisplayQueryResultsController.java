@@ -1,4 +1,4 @@
-// Controller for the DisplayQueryResults app
+package db_handler;// Controller for the DisplayQueryResults app
 import java.sql.SQLException;
 import java.util.regex.PatternSyntaxException;
 

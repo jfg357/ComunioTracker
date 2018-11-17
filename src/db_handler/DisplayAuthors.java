@@ -1,56 +1,56 @@
-// Displaying the contents of the Authors table using JdbcRowSet.
+package db_handler;// Fig. 24.23: DisplayAuthors.java
+// Displaying the contents of the Authors table.
+import java.sql.Connection;
+import java.sql.Statement;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
-import javax.sql.rowset.JdbcRowSet;    
-import javax.sql.rowset.RowSetProvider;
 
-public class JdbcRowSetTest {
-   // JDBC driver name and database URL                              
-   private static final String DATABASE_URL = "jdbc:derby:lib\\ct";
-   private static final String USERNAME = "root";
-   private static final String PASSWORD = "toor";
-   
+public class DisplayAuthors {
    public static void main(String args[]) {
-      // connect to database books and query database
-      try (JdbcRowSet rowSet =                          
-         RowSetProvider.newFactory().createJdbcRowSet()) {
+      final String DATABASE_URL = "jdbc:derby:lib\\ct";
+      final String SELECT_QUERY =                            
+         "SELECT authorID, firstName, lastName FROM authors";
 
-         // specify JdbcRowSet properties 
-         rowSet.setUrl(DATABASE_URL);                            
-         rowSet.setUsername(USERNAME);                           
-         rowSet.setPassword(PASSWORD);                           
-         rowSet.setCommand("SELECT * FROM League_T"); // set query
-         rowSet.execute(); // execute query                      
+      // use try-with-resources to connect to and query the database
+      try (                                                        
+         Connection connection = DriverManager.getConnection(      
+            DATABASE_URL, "root", "toor");
+         Statement statement = connection.createStatement();       
+         ResultSet resultSet = statement.executeQuery(SELECT_QUERY)) {
 
-         // process query results
-         ResultSetMetaData metaData = rowSet.getMetaData();
-         int numberOfColumns = metaData.getColumnCount();
+         // get ResultSet's meta data
+         ResultSetMetaData metaData = resultSet.getMetaData();
+         int numberOfColumns = metaData.getColumnCount();     
+         
          System.out.printf("Table of League Database:%n%n");
 
-         // display rowset header
+         // display the names of the columns in the ResultSet
          for (int i = 1; i <= numberOfColumns; i++) {
             System.out.printf("%-8s\t", metaData.getColumnName(i));
          }
          System.out.println();
          
-         // display each row
-         while (rowSet.next()) {
+         // display query results
+         while (resultSet.next()) {
             for (int i = 1; i <= numberOfColumns; i++) {
-               System.out.printf("%-8s\t", rowSet.getObject(i));
+               System.out.printf("%-8s\t", resultSet.getObject(i));
             }
             System.out.println();
          } 
       }
       catch (SQLException sqlException) {
          sqlException.printStackTrace();
-         System.exit(1);
-      } 
+      }                                                   
    } 
-}
+} 
+
+
 
 
 /**************************************************************************
- * (C) Copyright 1992-2018  by Deitel & Associates, Inc. and               *
+ * (C) Copyright 1992-2018 by Deitel & Associates, Inc. and               *
  * Pearson Education, Inc. All Rights Reserved.                           *
  *                                                                        *
  * DISCLAIMER: The authors and publisher of this book have used their     *
@@ -63,3 +63,5 @@ public class JdbcRowSetTest {
  * consequential damages in connection with, or arising out of, the       *
  * furnishing, performance, or use of these programs.                     *
  *************************************************************************/
+
+ 
