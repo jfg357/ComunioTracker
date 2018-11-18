@@ -18,17 +18,18 @@
     <Pane prefHeight="173.0" prefWidth="980.0" style="-fx-background-color: #2D75E8;"
       AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
       <children>
-        <Label layoutX="130.0" layoutY="44.0" text="KeepToo" textFill="WHITE">
+        <Label layoutX="130.0" layoutY="44.0" text="Comunio Tracker" textFill="WHITE">
           <font>
             <Font size="48.0"/>
           </font>
         </Label>
-        <Label layoutX="136.0" layoutY="105.0" text="School Mangement " textFill="WHITE">
+        <Label layoutX="136.0" layoutY="105.0" text="The Comunio Tool" textFill="WHITE">
           <font>
             <Font size="13.0"/>
           </font>
         </Label>
-        <FontAwesomeIconView fill="WHITE" glyphName="GG" layoutX="53.0" layoutY="103.0" size="60"/>
+        <FontAwesomeIconView fill="WHITE" glyphName="ANGELLIST" layoutX="53.0" layoutY="103.0"
+          size="60"/>
       </children>
     </Pane>
     <GridPane alignment="CENTER" hgap="10.0" layoutX="165.0" layoutY="228.0" prefHeight="320.0"
@@ -50,9 +51,9 @@
             <FontAwesomeIconView fill="#2d75e8" glyphName="HOME" size="50"/>
           </graphic>
         </Button>
-        <Button fx:id="btnStudents" contentDisplay="TOP" mnemonicParsing="false"
+        <Button fx:id="btnPlayers" contentDisplay="TOP" mnemonicParsing="false"
           onAction="#handleButtonClicks" prefHeight="181.0" prefWidth="242.0"
-          stylesheets="@../css/fullpackstyling.css" text="Students" GridPane.columnIndex="1">
+          stylesheets="@../css/fullpackstyling.css" text="Players" GridPane.columnIndex="1">
           <graphic>
             <FontAwesomeIconView fill="#2d75e8" glyphName="GROUP" size="50"/>
           </graphic>
@@ -78,8 +79,9 @@
             <FontAwesomeIconView fill="#2d75e8" glyphName="EXCHANGE" size="50"/>
           </graphic>
         </Button>
-        <Button fx:id="btnClasses" contentDisplay="TOP" mnemonicParsing="false" prefHeight="181.0"
-          prefWidth="242.0" stylesheets="@../css/fullpackstyling.css" text="Classes"
+        <Button fx:id="btnDBQuery" contentDisplay="TOP" mnemonicParsing="false"
+          onAction="#handleButtonClicks" prefHeight="181.0" prefWidth="242.0"
+          stylesheets="@../css/fullpackstyling.css" text="DB Query"
           GridPane.rowIndex="1">
           <graphic>
             <FontAwesomeIconView fill="#2d75e8" glyphName="INDENT" size="50"/>

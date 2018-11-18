@@ -19,10 +19,13 @@ public class Controller implements Initializable {
     private Button btnDashboard;
 
     @FXML
-    private Button btnStudents;
+    private Button btnPlayers;
 
     @FXML
     private Button btn_Timetable;
+
+    @FXML
+    private Button btnDBQuery;
 
     @FXML
     private Button btnSettings;
@@ -38,10 +41,12 @@ public class Controller implements Initializable {
     private void handleButtonClicks(javafx.event.ActionEvent mouseEvent) {
         if (mouseEvent.getSource() == btnDashboard) {
             loadStage("/app/fxml/Dashboard.fxml");
-        } else if (mouseEvent.getSource() == btnStudents) {
-            loadStage("/app/fxml/Students.fxml");
+        } else if (mouseEvent.getSource() == btnPlayers) {
+            loadStage("/app/fxml/Players.fxml");
         } else if (mouseEvent.getSource() == btn_Timetable) {
             loadStage("/app/fxml/Timetable.fxml");
+        } else if (mouseEvent.getSource() == btnDBQuery) {
+            loadStage("/app/fxml/DBQuery.fxml");
         }
     }
 

@@ -1,4 +1,4 @@
-package db_handler;// A TableModel that supplies ResultSet data to a JTable.
+package app.model;// A TableModel that supplies ResultSet data to a JTable.
 import java.sql.Connection;
 import java.sql.Statement;
 import java.sql.DriverManager;

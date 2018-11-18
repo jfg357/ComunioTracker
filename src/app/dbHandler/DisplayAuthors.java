@@ -1,4 +1,4 @@
-package db_handler;// Fig. 24.23: DisplayAuthors.java
+package app.dbHandler;// Fig. 24.23: app.dbHandler.DisplayAuthors.java
 // Displaying the contents of the Authors table.
 import java.sql.Connection;
 import java.sql.Statement;
@@ -11,7 +11,7 @@ public class DisplayAuthors {
    public static void main(String args[]) {
       final String DATABASE_URL = "jdbc:derby:lib\\ct";
       final String SELECT_QUERY =                            
-         "SELECT authorID, firstName, lastName FROM authors";
+         "SELECT PLAYERID, PLAYERFIRSTNAME, PLAYERLASTNAME FROM PLAYER_T";
 
       // use try-with-resources to connect to and query the database
       try (                                                        

@@ -4,24 +4,24 @@ package app.model;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 
-public class StudentsModel {
+public class PlayerModel {
 
-    private SimpleIntegerProperty studentId;
+    private SimpleIntegerProperty playerId;
     private SimpleStringProperty firstName;
     private SimpleStringProperty lastName;
 
-    public StudentsModel(Integer studentId, String firstName, String lastName) {
-        this.studentId = new SimpleIntegerProperty(studentId);
+    public PlayerModel(Integer playerId, String firstName, String lastName) {
+        this.playerId = new SimpleIntegerProperty(playerId);
         this.firstName = new SimpleStringProperty(firstName);
         this.lastName = new SimpleStringProperty(lastName);
     }
 
-    public int getStudentId() {
-        return studentId.get();
+    public int getPlayerId() {
+        return playerId.get();
     }
 
-    public void setStudentId(int studentId) {
-        this.studentId = new SimpleIntegerProperty(studentId);
+    public void setPlayerId(int playerId) {
+        this.playerId = new SimpleIntegerProperty(playerId);
     }
 
     public String getFirstName() {
@@ -37,6 +37,6 @@ public class StudentsModel {
     }
 
     public void setLastName(String lastName) {
-        this.lastName = new SimpleStringProperty(lastName);
+      this.lastName = new SimpleStringProperty(lastName);
     }
 }

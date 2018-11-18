@@ -1,6 +1,6 @@
 package app.controllers;
 
-import app.model.StudentsModel;
+import app.model.PlayerModel;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -16,15 +16,15 @@ import java.util.ResourceBundle;
 public class DashboardController implements Initializable {
 
     @FXML
-    private TableView<StudentsModel> tbData;
+    private TableView<PlayerModel> tbData;
     @FXML
-    public TableColumn<StudentsModel, Integer> studentId;
+    public TableColumn<PlayerModel, Integer> playerId;
 
     @FXML
-    public TableColumn<StudentsModel, String> firstName;
+    public TableColumn<PlayerModel, String> firstName;
 
     @FXML
-    public TableColumn<StudentsModel, String> lastName;
+    public TableColumn<PlayerModel, String> lastName;
 
     @FXML
     private PieChart pieChart;
@@ -33,15 +33,15 @@ public class DashboardController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
 
         loadChart();
-        loadStudents();
+        loadPlayers();
     }
 
     private void loadChart()
     {
 
-        PieChart.Data slice1 = new PieChart.Data("Classes", 213);
-        PieChart.Data slice2 = new PieChart.Data("Attendance"  , 67);
-        PieChart.Data slice3 = new PieChart.Data("Teachers" , 36);
+        PieChart.Data slice1 = new PieChart.Data("Goals", 213);
+        PieChart.Data slice2 = new PieChart.Data("Played"  , 67);
+        PieChart.Data slice3 = new PieChart.Data("Missed" , 36);
 
         pieChart.getData().add(slice1);
         pieChart.getData().add(slice2);
@@ -50,20 +50,20 @@ public class DashboardController implements Initializable {
     }
 
 
-    private ObservableList<StudentsModel> studentsModels = FXCollections.observableArrayList(
-            new StudentsModel(1,"Amos", "Chepchieng"),
-            new StudentsModel(2,"Amos", "Mors"),
-            new StudentsModel(3,"Amos", "Chepchieng"),
-            new StudentsModel(4,"Amos", "Mors")
+    private ObservableList<PlayerModel> playerModels = FXCollections.observableArrayList(
+        new PlayerModel(1, "Lionel", "Messi"),
+        new PlayerModel(2, "James", "Rodriguez"),
+        new PlayerModel(3, "Cristiano", "Ronaldo"),
+        new PlayerModel(4, "Pibe", "Valderrrama")
     );
 
 
-    private void loadStudents()
+    private void loadPlayers()
     {
-        studentId.setCellValueFactory(new PropertyValueFactory<>("StudentId"));
+        playerId.setCellValueFactory(new PropertyValueFactory<>("PlayerId"));
         firstName.setCellValueFactory(new PropertyValueFactory<>("FirstName"));
         lastName.setCellValueFactory(new PropertyValueFactory<>("LastName"));
-        tbData.setItems(studentsModels);
+        tbData.setItems(playerModels);
     }
 
 }

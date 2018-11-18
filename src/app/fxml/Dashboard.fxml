@@ -12,9 +12,16 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
-  prefHeight="609.0" prefWidth="944.0" xmlns="http://javafx.com/javafx/8.0.181"
-  xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controllers.DashboardController">
+<AnchorPane
+  maxHeight="-Infinity"
+  maxWidth="-Infinity"
+  minHeight="-Infinity"
+  minWidth="-Infinity"
+  prefHeight="609.0"
+  prefWidth="944.0"
+  xmlns="http://javafx.com/javafx/8.0.181"
+  xmlns:fx="http://javafx.com/fxml/1"
+  fx:controller="app.controllers.DashboardController">
   <children>
     <Pane layoutY="-2.0" prefHeight="139.0" prefWidth="950.0" style="-fx-background-color: #2D75E8;"
       AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-6.0" AnchorPane.topAnchor="-2.0">
@@ -46,7 +53,7 @@
         <Pane prefHeight="103.0" prefWidth="200.0"
           style="-fx-background-color: #3A84C3; -fx-background-radius: 1em;">
           <children>
-            <Label alignment="CENTER" layoutX="62.0" layoutY="65.0" text="Total Students"
+            <Label alignment="CENTER" layoutX="62.0" layoutY="65.0" text="Total Players"
               textFill="WHITE">
               <font>
                 <Font size="13.0"/>
@@ -79,7 +86,7 @@
           style="-fx-background-color: #5CB55B; -fx-background-radius: 1em;"
           GridPane.columnIndex="2">
           <children>
-            <Label layoutX="62.0" layoutY="70.0" text="Total Lessons" textFill="WHITE">
+            <Label layoutX="62.0" layoutY="70.0" text="Total Games" textFill="WHITE">
               <font>
                 <Font size="13.0"/>
               </font>
@@ -95,7 +102,7 @@
           style="-fx-background-color: #D7534E; -fx-background-radius: 1em;"
           GridPane.columnIndex="3">
           <children>
-            <Label layoutX="57.0" layoutY="70.0" text="Missed Classes" textFill="WHITE">
+            <Label layoutX="57.0" layoutY="70.0" text="Missed Games" textFill="WHITE">
               <font>
                 <Font size="13.0"/>
               </font>
@@ -124,7 +131,7 @@
             <TableView fx:id="tbData" prefHeight="349.0" prefWidth="1066.0"
               stylesheets="@../css/fullpackstyling.css">
               <columns>
-                <TableColumn fx:id="studentId" prefWidth="75.0" text="StudentId"/>
+                <TableColumn fx:id="playerId" prefWidth="75.0" text="PlayerId"/>
                 <TableColumn fx:id="firstName" prefWidth="75.0" text="First Name"/>
                 <TableColumn fx:id="lastName" prefWidth="75.0" text="Last Name"/>
               </columns>
