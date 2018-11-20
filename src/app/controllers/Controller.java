@@ -15,56 +15,57 @@ import java.util.ResourceBundle;
 
 public class Controller implements Initializable {
 
-    @FXML
-    private Button btnDashboard;
+  @FXML
+  private Button btnDashboard;
 
-    @FXML
-    private Button btnPlayers;
+  @FXML
+  private Button btnPlayers;
 
-    @FXML
-    private Button btn_Timetable;
+  @FXML
+  private Button btn_Timetable;
 
-    @FXML
-    private Button btnDBQuery;
+  @FXML
+  private Button btnDBQuery;
 
-    @FXML
-    private Button btnSettings;
+  @FXML
+  private Button btnSettings;
 
-    @FXML
-    private Button btnUpdate;
+  @FXML
+  private Button btnUpdate;
 
-    @FXML
-    private Button btnClasses;
+  @FXML
+  private Button btnClasses;
 
-    //my bad - the freaking mouse event
-    @FXML
-    private void handleButtonClicks(javafx.event.ActionEvent mouseEvent) {
-        if (mouseEvent.getSource() == btnDashboard) {
-            loadStage("/app/fxml/Dashboard.fxml");
-        } else if (mouseEvent.getSource() == btnPlayers) {
-            loadStage("/app/fxml/Players.fxml");
-        } else if (mouseEvent.getSource() == btn_Timetable) {
-            loadStage("/app/fxml/Timetable.fxml");
-        } else if (mouseEvent.getSource() == btnDBQuery) {
-            loadStage("/app/fxml/DisplayQueryResults.fxml");
-        }
+  //my bad - the freaking mouse event
+  @FXML
+
+  private void handleButtonClicks(javafx.event.ActionEvent mouseEvent) {
+    if (mouseEvent.getSource() == btnDashboard) {
+      loadStage("/app/fxml/Dashboard.fxml");
+    } else if (mouseEvent.getSource() == btnPlayers) {
+      loadStage("/app/fxml/Players.fxml");
+    } else if (mouseEvent.getSource() == btn_Timetable) {
+      loadStage("/app/fxml/Timetable.fxml");
+    } else if (mouseEvent.getSource() == btnDBQuery) {
+      loadStage("/app/fxml/DBQueryController.fxml");
     }
+  }
 
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
+  @Override
+  public void initialize(URL location, ResourceBundle resources) {
 
+  }
+
+  private void loadStage(String fxml) {
+    try {
+      Parent root = FXMLLoader.load(getClass().getResource(fxml));
+      Stage stage = new Stage();
+      stage.setScene(new Scene(root));
+      stage.getIcons().add(new Image("/app/icons/icon.png"));
+      stage.initModality(Modality.APPLICATION_MODAL);
+      stage.show();
+    } catch (IOException e) {
+      e.printStackTrace();
     }
-
-    private void loadStage(String fxml) {
-        try {
-            Parent root = FXMLLoader.load(getClass().getResource(fxml));
-            Stage stage = new Stage();
-            stage.setScene(new Scene(root));
-            stage.getIcons().add(new Image("/app/icons/icon.png"));
-            stage.initModality(Modality.APPLICATION_MODAL);
-            stage.show();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
+  }
 }

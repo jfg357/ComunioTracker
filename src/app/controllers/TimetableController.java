@@ -16,63 +16,59 @@ import java.util.ResourceBundle;
 public class TimetableController implements Initializable {
 
 
-    private CalendarView calendar;
+  private CalendarView calendar;
 
-    @FXML
-    private GridPane pnlHost;
+  @FXML
+  private GridPane pnlHost;
 
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
-         loadCalendar();
-    }
+  @Override
+  public void initialize(URL location, ResourceBundle resources) {
+    loadCalendar();
+  }
 
-    private void loadCalendar() {
-        calendar = new CalendarView();
+  private void loadCalendar() {
+    calendar = new CalendarView();
 
-        Calendar away = new Calendar("Away");
-        Calendar home = new Calendar("Home");
+    Calendar away = new Calendar("Away");
+    Calendar home = new Calendar("Home");
 
-        away.setStyle(Calendar.Style.STYLE7);
-        home.setStyle(Calendar.Style.STYLE2);
+    away.setStyle(Calendar.Style.STYLE7);
+    home.setStyle(Calendar.Style.STYLE2);
 
-        CalendarSource myCalendarSource = new CalendarSource("Timetable");
-        myCalendarSource.getCalendars().addAll(away, home);
+    CalendarSource myCalendarSource = new CalendarSource("Timetable");
+    myCalendarSource.getCalendars().addAll(away, home);
 
-        calendar.getCalendarSources().addAll(myCalendarSource);
+    calendar.getCalendarSources().addAll(myCalendarSource);
 
-        calendar.setRequestedTime(LocalTime.now());
+    calendar.setRequestedTime(LocalTime.now());
 
+    Thread updateTimeThread = new Thread("Calendar: Update Time Thread") {
+      @Override
+      public void run() {
+        while (true) {
+          Platform.runLater(() -> {
+            calendar.setToday(LocalDate.now());
+            calendar.setTime(LocalTime.now());
+          });
 
-        Thread updateTimeThread = new Thread("Calendar: Update Time Thread") {
-            @Override
-            public void run() {
-                while (true) {
-                    Platform.runLater(() -> {
-                        calendar.setToday(LocalDate.now());
-                        calendar.setTime(LocalTime.now());
-                    });
+          try {
+            // update every 10 seconds
+            sleep(10000);
+          } catch (InterruptedException e) {
+            e.printStackTrace();
+          }
 
-                    try {
-                        // update every 10 seconds
-                        sleep(10000);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
+        }
+      }
+    };
 
-                }
-            }
-        };
+    updateTimeThread.setPriority(Thread.MIN_PRIORITY);
+    updateTimeThread.setDaemon(true);
+    updateTimeThread.start();
 
-
-
-
-        updateTimeThread.setPriority(Thread.MIN_PRIORITY);
-        updateTimeThread.setDaemon(true);
-        updateTimeThread.start();
-
-        calendar.showMonthPage();
-        pnlHost.getChildren().add(calendar);
-    }
+    calendar.showMonthPage();
+    pnlHost.getChildren().add(calendar);
+  }
 
 
 }
