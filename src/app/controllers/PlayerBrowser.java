@@ -1,6 +1,6 @@
 package app.controllers;
 
-import app.dbHandler.*;
+import app.views.*;
 import app.model.*;
 import javafx.application.Application;
 import javafx.beans.value.*;
@@ -21,7 +21,7 @@ public class PlayerBrowser extends Application {
       "playerLastName", "playerCountry", "playerPhoto", "playerHeatMap"};
   private String[] propertyLabel = {"ID", "First Name", "Middle Name", "Last Name",
       "Country of Origin", "Photo", "Heat Map"};
-  private PlayerDAO player = new PlayerDAO();
+  private DisplayPlayer player = new DisplayPlayer();
   private final GridPane gridPane = new GridPane();
   private final Label lblName = new Label("Search by Name");
   private final TextField searchField = new TextField();

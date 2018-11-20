@@ -1,13 +1,9 @@
-package app.dbHandler;// Fig. 24.23: app.dbHandler.DisplayAuthors.java
+package app.views;// Fig. 24.23: app.views.DisplayAuthors.java
 // Displaying the contents of the Authors table.
-import java.sql.Connection;
-import java.sql.Statement;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.ResultSetMetaData;
-import java.sql.SQLException;
 
-public class DisplayAuthors {
+import java.sql.*;
+
+public class DisplayPlayers {
    public static void main(String args[]) {
       final String DATABASE_URL = "jdbc:derby:lib\\ct";
       final String SELECT_QUERY =                            

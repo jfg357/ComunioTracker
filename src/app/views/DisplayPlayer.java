@@ -1,13 +1,16 @@
-package app.dbHandler;
+package app.views;
 
-import app.interfaces.*;
-import app.model.*;
-import java.sql.*;
-import java.util.ArrayList;
-import java.util.List;
+import app.model.PlayersModel;
+import java.sql.Connection;
+import java.sql.Statement;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
+import java.sql.SQLException;
+import java.util.*;
 
 
-public class PlayerDAO {
+public class DisplayPlayer {
   // database URL, username and password
   private static final String DATABASE_URL = "jdbc:derby:lib\\ct";
   private static final String USERNAME = "root";
@@ -34,6 +37,11 @@ public class PlayerDAO {
   public List<PlayersModel> getPlayers() {
     String sqlQuery = "SELECT * FROM PLAYER_T ORDER BY PLAYERID";
     List<PlayersModel> list = new ArrayList<>();
+    doWork(sqlQuery, list);
+    return list;
+  }
+
+  private void doWork(String sqlQuery, List<PlayersModel> list) {
     try {
       Connection connection = DriverManager.getConnection(DATABASE_URL, USERNAME, PASSWORD);
       Statement statement = connection.createStatement();
@@ -47,25 +55,12 @@ public class PlayerDAO {
     } catch (SQLException ex) {
 
     }
-    return list;
   }
 
   public List<PlayersModel> getPlayerByFirstName(String playerFirstName) {
     String sqlQuery = "SELECT * FROM PLAYER_T WHERE PLAYERFIRSTNAME LIKE '%" + playerFirstName + "%'";
     List<PlayersModel> list = new ArrayList<>();
-    try {
-      Connection connection = DriverManager.getConnection(DATABASE_URL, USERNAME, PASSWORD);
-      Statement statement = connection.createStatement();
-      ResultSet rs = statement.executeQuery(sqlQuery);
-      while (rs.next()) {
-        PlayersModel p = createPlayer(rs);
-        list.add(p);
-      }
-      rs.close();
-      connection.close();
-    } catch (SQLException ex) {
-
-    }
+    doWork(sqlQuery, list);
     return list;
   }
 }

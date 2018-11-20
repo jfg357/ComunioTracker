@@ -27,7 +27,7 @@ public class DBQueryController {
    private static final String PASSWORD = "toor";
    
    // default query retrieves all data from Authors table
-   private static final String DEFAULT_QUERY = "SELECT * FROM League_T";
+   private static final String DEFAULT_QUERY = "SELECT * FROM PLAYER_T";
    
    // used for configuring JTable to display and sort data
    private ResultSetTableModel tableModel;
@@ -46,7 +46,7 @@ public class DBQueryController {
          JTable resultTable = new JTable(tableModel);
 
          // set up row sorting for JTable
-         sorter = new TableRowSorter<TableModel>(tableModel);
+         sorter = new TableRowSorter<>(tableModel);
          resultTable.setRowSorter(sorter);             
 
          // configure SwingNode to display JTable, then add to borderPane

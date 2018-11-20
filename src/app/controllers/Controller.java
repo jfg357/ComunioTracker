@@ -46,7 +46,7 @@ public class Controller implements Initializable {
         } else if (mouseEvent.getSource() == btn_Timetable) {
             loadStage("/app/fxml/Timetable.fxml");
         } else if (mouseEvent.getSource() == btnDBQuery) {
-            loadStage("/app/fxml/DBQuery.fxml");
+            loadStage("/app/fxml/DisplayQueryResults.fxml");
         }
     }
 
