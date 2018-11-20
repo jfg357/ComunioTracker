@@ -29,14 +29,14 @@ public class TimetableController implements Initializable {
     private void loadCalendar() {
         calendar = new CalendarView();
 
-        Calendar classes = new Calendar("Classes");
-        Calendar meetings = new Calendar("Meetings");
+        Calendar away = new Calendar("Away");
+        Calendar home = new Calendar("Home");
 
-        classes.setStyle(Calendar.Style.STYLE7);
-        meetings.setStyle(Calendar.Style.STYLE2);
+        away.setStyle(Calendar.Style.STYLE7);
+        home.setStyle(Calendar.Style.STYLE2);
 
         CalendarSource myCalendarSource = new CalendarSource("Timetable");
-        myCalendarSource.getCalendars().addAll(classes, meetings);
+        myCalendarSource.getCalendars().addAll(away, home);
 
         calendar.getCalendarSources().addAll(myCalendarSource);
 
