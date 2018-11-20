@@ -1,6 +1,6 @@
 ----------------------------------------------------------------
-Mon Nov 19 22:22:18 EST 2018:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-0167-2f23-dcfc-000005d64408 
+Mon Nov 19 22:35:18 EST 2018:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-0167-2f2f-c29f-000005d6b198 
 on database directory C:\Users\JGaviria\OneDrive - nachosinc.com\Code\Java\ComunioTracker\lib\ct with class loader sun.misc.Launcher$AppClassLoader@18b4aac2 
 Loaded from file:/C:/Users/JGaviria/OneDrive%20-%20nachosinc.com/Code/Java/ComunioTracker/lib/derby.jar
 java.vendor=Oracle Corporation
