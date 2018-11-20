@@ -4,6 +4,7 @@
 
 ## GUI Database Program
 The **content** and **functionality** of this program were up to us!
+![](UML01.png)
 
 ### Requirements:
   - Use *JavaFX*
