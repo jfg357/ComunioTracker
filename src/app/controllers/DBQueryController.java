@@ -1,5 +1,6 @@
 package app.controllers;
 
+import app.interfaces.*;
 import app.model.ResultSetTableModel;
 import java.sql.SQLException;
 import java.util.regex.PatternSyntaxException;
@@ -16,16 +17,11 @@ import javax.swing.*;
 import javax.swing.table.*;
 
 
-public class DBQueryController {
+public class DBQueryController implements DBConnection {
    @FXML private BorderPane borderPane;
    @FXML private TextArea queryTextArea;
    @FXML private TextField filterTextField;
 
-   // database URL, username and password
-   private static final String DATABASE_URL = "jdbc:derby:lib\\ct";
-   private static final String USERNAME = "root";
-   private static final String PASSWORD = "toor";
-   
    // default query retrieves all data from Authors table
    private static final String DEFAULT_QUERY = "SELECT * FROM PLAYER_T";
    

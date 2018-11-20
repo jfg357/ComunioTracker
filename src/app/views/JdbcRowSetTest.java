@@ -1,16 +1,13 @@
 package app.views;
 
+import app.interfaces.*;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import javax.sql.rowset.JdbcRowSet;    
 import javax.sql.rowset.RowSetProvider;
 
-public class JdbcRowSetTest {
-   // JDBC driver name and database URL                              
-   private static final String DATABASE_URL = "jdbc:derby:lib\\ct";
-   private static final String USERNAME = "root";
-   private static final String PASSWORD = "toor";
-   
+public class JdbcRowSetTest implements DBConnection {
+
    public static void main(String args[]) {
       // connect to database books and query database
       try (JdbcRowSet rowSet =                          
@@ -51,15 +48,11 @@ public class JdbcRowSetTest {
 
 
 /**************************************************************************
- * (C) Copyright 1992-2018  by Deitel & Associates, Inc. and               *
- * Pearson Education, Inc. All Rights Reserved.                           *
+ * (C) Copyright 2018  by Juan Gaviria & FGCU.                            *
  *                                                                        *
- * DISCLAIMER: The authors and publisher of this book have used their     *
- * best efforts in preparing the book. These efforts include the          *
- * development, research, and testing of the theories and programs        *
- * to determine their effectiveness. The authors and publisher make       *
+ * DISCLAIMER: The authors and publisher of this program make             *
  * no warranty of any kind, expressed or implied, with regard to these    *
- * programs or to the documentation contained in these books. The authors *
+ * programs or to the documentation contained in the code. The authors    *
  * and publisher shall not be liable in any event for incidental or       *
  * consequential damages in connection with, or arising out of, the       *
  * furnishing, performance, or use of these programs.                     *
