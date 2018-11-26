@@ -1,0 +1,15 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="ComunioTracker:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/ComunioTracker_jar</output-path>
+    <root id="archive" name="ComunioTracker.jar">
+      <element id="module-output" name="ComunioTracker" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/derby.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/ControlsFX/controlsfx-8.40.13.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/ControlsFX/fontawesomefx-commons-8.13.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/ControlsFX/fontawesomefx-fontawesome-4.7.0-1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/ControlsFX/joda-time-2.9.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/ControlsFX/recurrence-8.5.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/ControlsFX/view-8.5.0.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
